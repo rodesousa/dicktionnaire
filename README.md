@@ -11,4 +11,4 @@ Pour la Communauté du V
 
 La fête :
 
-docker exec -it dicktionnaire-app bash entrypoint_dick.sh
+docker exec -it dicktionnaire-app ./dick.py
