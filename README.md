@@ -5,8 +5,10 @@ Pour la Communauté du V
 
 1- docker pull rodesousa/dicktionnaire
 
-2 - docker exec -it test bash entrypoint_dick.sh
+2- docker run --name dicktionnaire-app -d dicktionnaire
+
+3 - docker exec -it dicktionnaire-app bash entrypoint_dick.sh
 
 La fête :
 
-docker exec -it test bash entrypoint_dick.sh
+docker exec -it dicktionnaire-app bash entrypoint_dick.sh
