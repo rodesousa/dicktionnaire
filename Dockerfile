@@ -7,6 +7,4 @@ RUN \
     && apt-get install python -y \
     && apt-get install python-mysqldb -y
 
-COPY files/db.sql /
-COPY files/dick.py /
-COPY files/entrypoint_dick.sh /
+COPY files/ /
