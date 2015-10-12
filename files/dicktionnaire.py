@@ -7,7 +7,8 @@ import MySQLdb as mdb
 from  random import *
 from grammaire import Grammaire
 
-
+# Construction de la phrase de grammaire.next en grammaire.next
+# jusqu a finish
 def dicktionnaire(grammaire):
     def rec(grammaire, dicksentence):
         if grammaire[0].name == 'finish':
@@ -18,7 +19,9 @@ def dicktionnaire(grammaire):
              return rec(gram, dicksentence)
     dick_sentence = [grammaire]
     return rec((grammaire,99), dick_sentence)
-
+    
+# on tire un nbr random. On garde les grammaires qui on un rate au dessus du nbr.
+# Et on sort
 def random_grammaire(grammaires):
     res = sorted(filter(lambda (x,y): randint(0,99) < y, grammaires), key = lambda (x,y) : y)
     return res[0]
@@ -92,4 +95,3 @@ except:
 
 #finally:
 #    con.close()
-
